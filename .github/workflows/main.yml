@@ -32,6 +32,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: List repository files
+        run: ls -R
+
       - name: Wait for MySQL to be ready
         run: |
           until mysqladmin ping -h 127.0.0.1 --silent; do
