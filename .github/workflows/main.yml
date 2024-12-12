@@ -43,7 +43,7 @@ jobs:
         env:
           MYSQL_PWD: root
         run: |
-          for file in path/to/your/sql/scripts/*.sql; do
-          echo "Running $file"
-          mysql -h 127.0.0.1 -u root testdb < "$file"
+          for file in sql-scripts/*.sql; do
+            echo "Running $file"
+            mysql -h 127.0.0.1 -u root testdb < "$file"
           done
