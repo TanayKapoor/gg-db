@@ -1,5 +1,5 @@
 CREATE TABLE `users` (
-  `id` integer PRIMARY KEY,
+  `id` integer PRIMARY KEY AUTO_INCREMENT,
   `avatar` varchar(255),
   `first_name` varchar(255),
   `last_name` varchar(255),
