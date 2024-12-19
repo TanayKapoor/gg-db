@@ -1,7 +1,7 @@
 CREATE TABLE `users` (
-  `id` integer PRIMARY KEY AUTO_INCREMENT,
+  `id` integer PRIMARY KEY AUTO_INCREMENT ,
   `avatar` varchar(255),
-  `first_name` varchar(255),
+  `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255),
   `username` varchar(255) UNIQUE NOT NULL,
   `email` varchar(255) UNIQUE NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE `users` (
   `birth_date` date,
   `phone_number` varchar(255),
   `is_active` boolean DEFAULT true,
-  `created_at` timestamp,
+  `created_at` timestamp NOT NULL,
   `updated_at` timestamp,
   `deleted_at` timestamp
 );
